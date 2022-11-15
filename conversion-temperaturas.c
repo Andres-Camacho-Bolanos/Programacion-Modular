@@ -1,4 +1,4 @@
-//Programa que realiza conversiones de temperatura
+//Crear un programa que realice conversiones de temperatura
 #include<stdio.h>
 
 
