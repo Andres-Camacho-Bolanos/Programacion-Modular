@@ -1,61 +1,50 @@
-// C program to multiply two matrices
- 
 #include <stdio.h>
-#include <stdlib.h>
- 
-// Edit MACROs here, according to your Matrix Dimensions for
-// mat1[R1][C1] and mat2[R2][C2]
-#define R1 2 // number of rows in Matrix-1
-#define C1 2 // number of columns in Matrix-1
-#define R2 2 // number of rows in Matrix-2
-#define C2 2 // number of columns in Matrix-2
- 
-void mulMat(int mat1[][C1], int mat2[][C2])
-{
-    int rslt[R1][C2];
- 
-    printf("Multiplication of given two matrices is:\n");
- 
-    for (int i = 0; i < R1; i++) {
-        for (int j = 0; j < C2; j++) {
-            rslt[i][j] = 0;
- 
-            for (int k = 0; k < R2; k++) {
-                rslt[i][j] += mat1[i][k] * mat2[k][j];
-            }
- 
-            printf("%d\t", rslt[i][j]);
+#define F 2
+#define C 2
+
+void multiplicacion_matrices(){
+     
+    int MatrizA[F][C],MatrizB[F][C],MatrizC[F][C],filas,columnas, k, suma,j,i;
+printf("Matriz 1\n");
+ //Matriz A
+    printf("Indique el numero de filas:");scanf("%d",&filas);
+    printf("Indique el numero de columnas:");scanf("%d",&columnas);
+
+    for(int i=0; i < filas; i ++){
+        for(int j=0;j < columnas; j ++){
+            printf("Indique los valores de su matriz[%d][%d]:",i + 1 ,j + 1);scanf("%d",&MatrizA[i][j]);
         }
- 
+    }
+   //Matriz B 
+    printf("\nMatriz 2\n");
+    printf("Indique el numero de filas:");scanf("%d",&filas);
+    printf("Indique el numero de columnas:");scanf("%d",&columnas);
+
+    for(i=0; i < filas; i ++){
+        for(j=0;j < columnas; j ++){
+            printf("Indique los valores de su matriz [%d][%d]:",i + 1 ,j+ 1);scanf("%d",&MatrizB[i][j]);
+        }
+    }
+
+    //Producto de matrices
+    for ( i=0; i < filas; i ++){
+        for(j=0; j< columnas;j++){
+            int suma=0;
+            for (k=0;k < columnas; k ++){
+                suma += MatrizA[i][k] * MatrizB[k][j];
+                
+            }
+            MatrizC[i][j]= suma;
+            printf("\t%d",MatrizC[i][j]);
+            
+        }
         printf("\n");
     }
 }
- 
-// Driver code
-int main()
-{
-    // R1 = 4, C1 = 4 and R2 = 4, C2 = 4 (Update these
-    // values in MACROs)
-    int mat1[R1][C1] = { { 1, 1 },
-                         { 2, 2 } };
- 
-    int mat2[R2][C2] = { { 1, 1 },
-                         { 2, 2 } };
- 
- 
-    if (C1 != R2) {
-        printf("The number of columns in Matrix-1  must be "
-               "equal to the number of rows in "
-               "Matrix-2\n");
-        printf("Please update MACROs value according to "
-               "your array dimension in "
-               "#define section\n");
- 
-        exit(EXIT_FAILURE);
-    }
- 
-      // Function call
-    mulMat(mat1, mat2);
- 
-    return 0;
+   
+
+
+int main(){
+
+    multiplicacion_matrices();
 }
