@@ -1,3 +1,5 @@
+//Programa para multiplicar matrices de 2x2//
+
 #include <stdio.h>
 #define F 2
 #define C 2
@@ -7,22 +9,22 @@ void multiplicacion_matrices(){
     int MatrizA[F][C],MatrizB[F][C],MatrizC[F][C],filas,columnas, k, suma,j,i;
 printf("Matriz 1\n");
  //Matriz A
-    printf("Indique el numero de filas:");scanf("%d",&filas);
+    printf("Indique el numero de filas:");scanf("%d",&filas); //SE INDICAN LAS PROPIEDADES DE LA PRIMERA MATRIZ//
     printf("Indique el numero de columnas:");scanf("%d",&columnas);
 
     for(int i=0; i < filas; i ++){
         for(int j=0;j < columnas; j ++){
-            printf("Indique los valores de su matriz[%d][%d]:",i + 1 ,j + 1);scanf("%d",&MatrizA[i][j]);
+            printf("Indique los valores de su matriz[%d][%d]:",i + 1 ,j + 1);scanf("%d",&MatrizA[i][j]); //SE INTRODUCEN LOS VALORES//
         }
     }
    //Matriz B 
     printf("\nMatriz 2\n");
-    printf("Indique el numero de filas:");scanf("%d",&filas);
+    printf("Indique el numero de filas:");scanf("%d",&filas); //SE INDICAN LAS PROPIEDADES DE LA SEGUNDA MATRIZ//
     printf("Indique el numero de columnas:");scanf("%d",&columnas);
 
     for(i=0; i < filas; i ++){
         for(j=0;j < columnas; j ++){
-            printf("Indique los valores de su matriz [%d][%d]:",i + 1 ,j+ 1);scanf("%d",&MatrizB[i][j]);
+            printf("Indique los valores de su matriz [%d][%d]:",i + 1 ,j+ 1);scanf("%d",&MatrizB[i][j]); //SE INTRODUCEN LOS VALORES//
         }
     }
 
@@ -38,7 +40,7 @@ printf("Matriz 1\n");
             printf("\t%d",MatrizC[i][j]);
             
         }
-        printf("\n");
+        printf("\n"); //SE IMPRIME EL RESULTADO//
     }
 }
    
