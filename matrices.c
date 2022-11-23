@@ -1,3 +1,5 @@
+//Programa para sumar dos matrices//
+
 #include<stdio.h>
 #include <stdlib.h>
 
@@ -12,7 +14,7 @@ void suma_matrices(){
     
     printf("Matriz 1\n \n");
 
-    printf("Indique el número de filas:");scanf("%d",&n_filas);
+    printf("Indique el número de filas:");scanf("%d",&n_filas); //SE INTRODUCEN LAS PROPIEDADES DE LA PRIMERA MATRIZ//
     printf("Indique el número de columnas:");scanf("%d",&n_columnas);
 
     //Matriz a
@@ -20,7 +22,7 @@ void suma_matrices(){
     for (filas=0;filas < n_filas; filas ++){
 
         for(columnas=0;columnas < n_columnas;columnas ++){
-            printf("Indique el elemento: [%d][%d]:",filas  + 1 ,columnas + 1);scanf("%d",&matriz_A[filas][columnas]);
+            printf("Indique el elemento: [%d][%d]:",filas  + 1 ,columnas + 1);scanf("%d",&matriz_A[filas][columnas]); //SE INTRODUCEN LOS VALORES//
         }
     }
 
@@ -29,13 +31,13 @@ void suma_matrices(){
     printf("\n");
     printf("Matriz 2\n");
     
-    printf("Indique el número de filas:");scanf("%d",&n_filas);
+    printf("Indique el número de filas:");scanf("%d",&n_filas); //SE INTRODUCEN LAS PROPIEDADES DE LA SEGUNDA MATRIZ//
     printf("Indique el número de columnas:");scanf("%d",&n_columnas);
     printf("\n");
 
     for(filas=0;filas < n_filas; filas ++){
         for (columnas=0;columnas < n_columnas;columnas++){
-            printf("Indique el elemento:[%d][%d]:",filas  + 1 ,columnas + 1);scanf("%d",&matriz_B[filas][columnas]);
+            printf("Indique el elemento:[%d][%d]:",filas  + 1 ,columnas + 1);scanf("%d",&matriz_B[filas][columnas]); //SE INTRODUCEN LOS VALORES//
         }
     }
 
@@ -56,7 +58,7 @@ void suma_matrices(){
         for(columnas=0;columnas < n_columnas;columnas ++){
             printf("\t%d",matriz_C[filas][columnas]);
         }
-        printf("\n");    
+        printf("\n");    //SE IMPRIME EL RESULTADO//
     }
     
 }
