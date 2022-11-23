@@ -1,4 +1,5 @@
-//Crear un programa que realice conversiones de temperatura
+//Programa para realizar conversiones de temperatura//
+
 #include<stdio.h>
 
 
@@ -8,9 +9,10 @@ float temperatura,resultado;
 
 void fahrenheit(){
     
-    printf("Indique el valor de la temperatura:");scanf("%f",&temperatura);
+    printf("Indique el valor de la temperatura:");scanf("%f",&temperatura); //SE LEE EL VALOR DE LA TEMPERATURA//
     printf("\n\n");
     printf("Indique la conversión deseada( seleccionar el número de la opción que corresponda): \n\n 1. F--> C \n 2. F-->K\n:");scanf("%i",&opc_c);
+    //SE LEE LA OPCIÓN SELECCIONADA//
     
     if (opc_c==1){
         resultado= (temperatura - 32)*0.55 ;
@@ -25,7 +27,7 @@ void fahrenheit(){
     
 
     else{
-        printf("Por favor, seleccione una opción valida");
+        printf("Por favor, seleccione una opción valida"); //SE IMPRIME EL RESULTADO DE LA OPCIÓN SELECCIONADA//
     
     }
     
@@ -34,7 +36,7 @@ void fahrenheit(){
 
 void celcius(){
     printf("Indique la conversión deseada (seleccionar el número de la opción que corresponda):\n1.C--> F \n2.C-->K\n:") ;scanf("%i",&opc_c);
-    printf("Indique el valor de la temperatura:");scanf("%f",&temperatura);
+    printf("Indique el valor de la temperatura:");scanf("%f",&temperatura); //SE LEE EL VALOR DE LA TEMPERATURA//
     
     if (opc_c==1){
         resultado= (temperatura * 1.8) + 32 ;
@@ -49,7 +51,7 @@ void celcius(){
     
 
     else{
-        printf("Por favor, seleccione una opción valida");
+        printf("Por favor, seleccione una opción valida"); //SE IMPRIME EL RESULTADO DE LA OPCIÓN SELECCIONADA//
     
     }
     
@@ -57,7 +59,7 @@ void celcius(){
 
 void kelvin(){
 
-    printf("Indique el valor de la temperatura:");scanf("%f",&temperatura);
+    printf("Indique el valor de la temperatura:");scanf("%f",&temperatura); //SE LEE EL VALOR DE LA TEMPERATURA//
     printf("Indique la conversión deseada: (seleccionar el número de la opción que corresponda)\n1.K--> C \n2.K-->F \n:");scanf("%i",&opc_c);
      
     if (opc_c==1){
@@ -73,7 +75,7 @@ void kelvin(){
     
 
     else{
-        printf("Por favor, seleccione una opción valida");
+        printf("Por favor, seleccione una opción valida"); //SE IMPRIME EL RESULTADO DE LA OPCIÓN SELECCIONADA//
     
     }
 }
@@ -81,12 +83,12 @@ void kelvin(){
 
 int main(){
 
-    printf("Indique la unidad del valor de la temperatura (seleccionar el número de la opción que corresponda):");
+    printf("Indique la unidad del valor de la temperatura (seleccionar el número de la opción que corresponda):"); //SE LEE EL VALOR DE LA TEMPERATURA//
     printf("\n");
     printf("\n1.°F\n2.°C\n3. K\n:");scanf("%i",&opc);
 
 
-    switch(opc)
+    switch(opc) //SE SELECCIONA LA OPCIÓN CORRESPONDIENTE//
     { 
         
         case 1:
@@ -104,7 +106,7 @@ int main(){
     
     
         default:
-            printf("Por favor, seleccione una opción valida");
+            printf("Por favor, seleccione una opción valida"); //SE IMPRIME UN MENSAJE PREDETERMINADO EN CASO DE NO SELECCIONAR UNA OPCIÓN VÁLIDA//
     }    
     return 0;
 }
