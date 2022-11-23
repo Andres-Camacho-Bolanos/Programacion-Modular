@@ -1,16 +1,16 @@
-//Factorial
+//Programa para calcular el factorial de un número//
 #include<stdio.h>
 
 
 void factorial(){
 
     int entero,facto=1,i;
-    printf("Digite un numero:");scanf("%i",&entero);
+    printf("Introduzca un numero:");scanf("%i",&entero); //SE INTRODUCE UN VALOR//
 
     for ( i=1; i <= entero; i ++){
         
         facto = facto * i;
-        printf("El resultado es: %i ",facto);
+        printf("El resultado es: %i ",facto); //SE IMPRIME EL RESULTADO//
         
     }
         
