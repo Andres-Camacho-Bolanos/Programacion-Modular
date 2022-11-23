@@ -5,7 +5,7 @@
 
 int main() {
 
-    int opción;
+    int n, opcion;
  do
  {
     printf("\n 1.triángulo");
@@ -16,9 +16,57 @@ int main() {
     printf("\n 6.matrices2");
     printf("\n 7.matrices3");
     printf("\n 8.Salir");
-//Se filtra la opción elegida//
+//Se filtra la opción que va a elegir el usuario//
 do
 {
-    printf(
+    printf("\n Introduzca una opción (1-8):");
+    scanf("%d", &opción);
+}
+while ( opción <1 || >8);
+//Se limitan las opciones que pueden ser válidas//
+switch (opción)
+{
+    case 1: 
+    prinft("\n Iniciar programa triángulo");
+    scanf("%d", &n);
+    int triangulo;
+    break;
+
+    case 2:
+    printf("\n Iniciar programa cuadrado");
+    scanf("%d", &n);
+    int cuadrado;
+    break;
+
+    case 3:
+    printf("\n Iniciar programa factorial");
+    scanf("%d", &n);
+    int factorial;
+    break;
+
+    case 4:
+    printf("\n Iniciar programa salario");
+    scanf("%d", &n);
+    int salario;
+    break;
+
+    case 5:
+    printf("\n Iniciar programa matrices");
+    scanf(%d", &n);
+    int matrices;
+    break;
+
+    case 6:
+    printf("\n Iniciar programa matrices 2");
+    scanf(%d", &n);
+    int matrices 2;
+    break;
+
+    case 7:
+    printf("\ Iniciar programa matrices 3");
+    scanf("%d", & n);
+    int matrices 3;
+    break;
+
 }
 } 
