@@ -1,3 +1,5 @@
+//Programa para obtener la matriz transpuesta a partir de la original//
+
 #include<stdio.h>
 #define MAX 3
 int main(int argc, char** args)
