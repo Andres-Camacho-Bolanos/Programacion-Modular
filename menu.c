@@ -63,10 +63,11 @@ switch (opción)
     break;
 
     case 7:
-    printf("\ Iniciar programa matrices 3");
+    printf("\n Iniciar programa matrices 3");
     scanf("%d", & n);
     int matrices 3;
     break;
 
-}
+}while (opcion! =8);
+return 0;
 } 
