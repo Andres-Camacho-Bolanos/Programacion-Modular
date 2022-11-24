@@ -1,14 +1,18 @@
+//Camacho Bolaños Andrés 1196 Diseño de Algoritmos Proyecto Final//
 //Programa para crear un menú con selección de múltiples programas//
+//Los programas hechos en clase han sido modificados para integrarse correctamente a este código//
 
 #include<stdio.h>
 #include<math.h>
+#define F 3
+#define C 3 //Dimensiones para todas las matrices//
 //Programa para generar una matriz transpuesta a partir de una original//
 void matriz_transpuesta(){	
 	int m, n, c, d, original[3][3], trans[3][3];
 	
 	printf("Ingrese el número de filas y columnas, separados por un espacio: ");
 	scanf("%d%d",&m,&n);
-	printf("Ingrese los elementos de la matriz: \n");
+	printf("Ingrese los elementos de la matriz: \n"); //Se introducen las propiedades de la matriz//
 	
 	for(c=0;c<m;c++){
 		for(d=0;d<n;d++){
@@ -18,7 +22,7 @@ void matriz_transpuesta(){
 	
 	for(c=0;c<m;c++){
 		for(d=0;d<n;d++){
-			trans[d][c] = original[c][d];
+			trans[d][c] = original[c][d]; //Se hace la transformación//
 		}
 	}
 	
@@ -28,7 +32,7 @@ void matriz_transpuesta(){
 		for(d=0;d<m;d++){
 			printf("%d\t",trans[c][d]);
 		}  
-		printf("\n");
+		printf("\n"); //Se imprimen resultados//
 	}
 	
 }
@@ -84,8 +88,6 @@ void cuadrados(){
 }
 
 //Programa para multiplicar matrices de 2x2//
-#define F 2
-#define C 2
 
 void multiplicacion_matrices(){
      
@@ -126,11 +128,9 @@ printf("Matriz 1\n");
         printf("\n"); //SE IMPRIME EL RESULTADO//
     }
 }
-//Programa para sumar dos matrices//
-#define F 10
-#define C 10
 
-      
+//Programa para sumar dos matrices//
+
 void suma_matrices(){
     printf("Programa para calcular la suma de dos matrices\n\n");
 
@@ -176,7 +176,7 @@ void suma_matrices(){
     }
     
     printf("\n");
-    //Impresión de la matriz
+    //Se imprime la matriz
     for (filas=0; filas < n_filas;filas ++){
         
         for(columnas=0;columnas < n_columnas;columnas ++){
@@ -186,13 +186,14 @@ void suma_matrices(){
     }
     
 }
+
 /*
 La suma de cada cateto al cuadrado es igual a la hipotenusa al cuadrado
 Triángulo rectángulo: un ángulo de 90° y todos los lados diferentes
 Calcula la hipotenusa dek triángulo
-Se tiene que utilizar el parámetro lm para que funcione: gcc triangulo.c -lm -o triangulo
+Se tiene que utilizar el parámetro lm para que funcione: gcc triangulo.c -lm -o triangulo en linux
 */
-void triangulo(){
+
 void hipotenusa(){
 
 
@@ -234,33 +235,7 @@ void angulo(){
 	printf("El tercer angulo mide : %f",a3); //SE IMPRIME EL VALOR DEL TERCER ÁNGULO DEL TRIÁNGULO//
 	
 }
-	char opc;
-	printf("Eliga la opcion que desee: a)Hipotenusa de un triangulo rectangulo ,  b) area de un triangulo   c)valor de un angulo ");
-	scanf("%c",&opc); //SE LEE LA OPCIÓN SLECCIONADA//
-	
-	
-	switch(opc){ //SE APLICA EL CASO CORRESPONDIENTE A LA OPCIÓN SELECCIONADA//
-		
-		
-		case 'a':
-		hipotenusa();
-		break;
-		
-		
-		case 'b':
-		area();
-		break;
-		
-		
-		
-		case 'c':
-		angulo();
-		break;
-	  	
-		
-		
-	}
-} 
+
 //Programa para calcular el factorial de un número//
 void factorial(){
 
@@ -278,6 +253,7 @@ void factorial(){
     
     
 }
+
 //Programa para calcular el salario neto mensual//
 void salario_neto(){
 	float bono,iva_a,iva_r,salario_bruto,salario_neto;
@@ -411,11 +387,13 @@ void kelvin(){
 }
 }
 
+//Una vez que todos los códigos se han escrito, iniciaremos nuestra función main donde llamaremos a las funciones que contienen a los demás programas//
 int main() {
 
-    int n, eleccion;
- do
- {
+    int n, eleccion; //Se enlistan todos los programas que contiene el menú//
+    
+    printf("\nBienvenido\n");
+    printf("\n Por favor, introduzca una opción (1-8):");
     printf("\n 1.Triángulo");
     printf("\n 2.Cuadrado");
     printf("\n 3.Factorial");
@@ -423,67 +401,72 @@ int main() {
     printf("\n 5.Suma de matrices");
     printf("\n 6.Multiplicación de matrices");
     printf("\n 7.Matriz transpuesta");
-    printf("\n 8.Conversiones de temperatura");
-    printf("\n 9.Salir");
+    printf("\n 8.Conversiones de temperatura\n");
 //Se filtra la opción que va a elegir el usuario//
-do
-{
-    printf("\n Introduzca una opción (1-9):");
     scanf("%d", &eleccion);
-}
-while ( eleccion <1 || >9);
+    printf("\n");
+
+    if ( eleccion >=1 || eleccion <=8){
 //Se limitan las opciones que pueden ser válidas//
-switch (eleccion)
-{
-    case 1: 
-    printf("\n Iniciar programa triángulo");
+    switch (eleccion){ //Iniciamos un switch para acceder a los programas mediante casos//
+        
+    case 1: //En el triangulo se hizo una función independiente en clase para cada propiedad//
+    printf("\n Iniciar programa triángulo\n");
+    printf("\n Seleccione la opción a realizar: \n1.Área, \n2.Hipotenusa, \n3.Ángulo\n");
     scanf("%d", &n);
-    int triangulo;
-    break;
-
-    case 2:
-    printf("\n Iniciar programa cuadrado");
-    scanf("%d", &n);
-    int cuadrados;
-    break;
-
-    case 3:
-    printf("\n Iniciar programa factorial");
-    scanf("%d", &n);
-    int factorial;
-    break;
-
-    case 4:
-    printf("\n Iniciar programa salario");
-    scanf("%d", &n);
-    int salario_neto;
-    break;
-
-    case 5:
-    printf("\n Iniciar programa matrices");
-    scanf("%d", &n);
-    int suma_matrices;
-    break;
-    case 6:
-    printf("\n Iniciar programa matrices 2");
-    scanf("%d", &n);
-    int multiplicacion_matrices;
-    break;
-
-    case 7:
-    printf("\n Iniciar programa matrices 3");
-    scanf("%d", & n);
-    int matriz_transpuesta;
+    if (n ==1){ //Usaremos if, else e if else para simplificarlo//
+    area();
+    }
+    else if (n==2){
+    hipotenusa();
+    }
+    else {
+    angulo();
+    }
     break;
     
-    case 8:
-    printf("\n Iniciar programa conversiones");
-    scanf("%d" & n);
-    int conversiones;
+    case 2: //Iniciando programa de cuadrado, rectángulo y trapecio//
+    printf("\n Iniciar programa cuadrado\n");
+    cuadrados();
     break;
 
-}while (eleccion! =9);
-return 0;
+    case 3: //Iniciando programa para obtener de un número su factorial//
+    printf("\n Iniciar programa factorial\n");
+    factorial();
+    break;
+
+    case 4: //Iniciando programa para calcular el salario neto//
+    printf("\n Iniciar programa salario\n");
+    salario_neto();
+    break;
+
+    case 5: //Iniciando programa para realizar una suma de matrices//
+    printf("\n Iniciar programa suma de matrices\n");
+    suma_matrices();
+    break;
+    
+    case 6: //Iniciando programa para multiplicar matrices//
+    printf("\n Iniciar programa multiplicación de matrices\n");
+    multiplicacion_matrices();
+    break;
+
+    case 7: //Iniciando programa para convertir una matriz a su transpuesta//
+    printf("\n Iniciar programa matriz transpuesta\n");
+    matriz_transpuesta();
+    break;
+    
+    case 8: //Iniciando programa para realizar conversiones de temperatura
+    printf("\n Iniciar programa conversiones\n");
+    temperaturas();
+    break;
+    
+    default: //Caso por defecto al seleccionar un valor distinto//
+    printf("\n :)\n");
 
 }
+}
+else{ printf("Fin del programa"); //El programa finaliza//
+}
+return 0;
+
 }
