@@ -53,11 +53,6 @@ void cuadrados(){
 
 }
 
-int main(){
-   cuadrados(); 
-
-    return 0;
-}
 //Programa para multiplicar matrices de 2x2//
 #define F 2
 #define C 2
@@ -236,10 +231,6 @@ void angulo(){
 		
 	}
 } 
-int main() {
-    triangulo();
-    return 0;
-}
 //Programa para calcular el factorial de un número//
 void factorial(){
 
@@ -283,14 +274,16 @@ void sueldo_neto(){
     else {
 		printf("Fin del programa");
 	}
-	return 0;
 }
 //Programa para realizar conversiones de temperatura//
-void conversiones(){
+
+#include<stdio.h>
+
+
 int opc, opc_c;
 float temperatura,resultado;
 
-
+void temperaturas(){
 void fahrenheit(){
     
     printf("Indique el valor de la temperatura:");scanf("%f",&temperatura); //SE LEE EL VALOR DE LA TEMPERATURA//
@@ -363,9 +356,6 @@ void kelvin(){
     
     }
 }
-} 
-
-int main(){
 
     printf("Indique la unidad del valor de la temperatura (seleccionar el número de la opción que corresponda):"); //SE LEE EL VALOR DE LA TEMPERATURA//
     printf("\n");
@@ -391,17 +381,17 @@ int main(){
     
         default:
             printf("Por favor, seleccione una opción valida"); //SE IMPRIME UN MENSAJE PREDETERMINADO EN CASO DE NO SELECCIONAR UNA OPCIÓN VÁLIDA//
-    }    
-    return 0;
 }
+}
+
 int main() {
 
-    int n, opcion;
+    int n, eleccion;
  do
  {
     printf("\n 1.triángulo");
     printf("\n 2.cuadrado");
-    pirntf("\n 3.factorial");
+    printf("\n 3.factorial");
     printf("\n 4.salario");
     printf("\n 5.matrices");
     printf("\n 6.matrices2");
@@ -412,14 +402,14 @@ int main() {
 do
 {
     printf("\n Introduzca una opción (1-8):");
-    scanf("%d", &opción);
+    scanf("%d", &eleccion);
 }
-while ( opción <1 || >8);
+while ( eleccion <1 || >8);
 //Se limitan las opciones que pueden ser válidas//
-switch (opción)
+switch (eleccion)
 {
     case 1: 
-    prinft("\n Iniciar programa triángulo");
+    printf("\n Iniciar programa triángulo");
     scanf("%d", &n);
     int triangulo;
     break;
@@ -444,13 +434,12 @@ switch (opción)
 
     case 5:
     printf("\n Iniciar programa matrices");
-    scanf(%d", &n);
+    scanf("%d", &n);
     int suma_matrices;
     break;
-
     case 6:
     printf("\n Iniciar programa matrices 2");
-    scanf(%d", &n);
+    scanf("%d", &n);
     int multiplicacion_matrices;
     break;
 
@@ -463,8 +452,10 @@ switch (opción)
     case 8:
     printf("\n Iniciar programa conversiones");
     scanf("%d" & n);
+    int conversiones;
     break;
 
 }while (opcion! =9);
 return 0;
+
 }
