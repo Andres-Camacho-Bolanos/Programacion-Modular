@@ -111,10 +111,6 @@ Triángulo rectángulo: un ángulo de 90° y todos los lados diferentes
 Calcula la hipotenusa dek triángulo
 Se tiene que utilizar el parámetro lm para que funcione: gcc triangulo.c -lm -o triangulo
 */
-
-#include<stdio.h>
-#include<math.h>
-
 void triangulo(){
 void hipotenusa(){
 
