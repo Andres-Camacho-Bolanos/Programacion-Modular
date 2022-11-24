@@ -2,6 +2,193 @@
 
 #include<stdio.h>
 #include<math.h>
+//Programa para multiplicar matrices de 2x2//
+#define F 2
+#define C 2
+
+void multiplicacion_matrices(){
+     
+    int MatrizA[F][C],MatrizB[F][C],MatrizC[F][C],filas,columnas, k, suma,j,i;
+printf("Matriz 1\n");
+ //Matriz A
+    printf("Indique el numero de filas:");scanf("%d",&filas); //SE INDICAN LAS PROPIEDADES DE LA PRIMERA MATRIZ//
+    printf("Indique el numero de columnas:");scanf("%d",&columnas);
+
+    for(int i=0; i < filas; i ++){
+        for(int j=0;j < columnas; j ++){
+            printf("Indique los valores de su matriz[%d][%d]:",i + 1 ,j + 1);scanf("%d",&MatrizA[i][j]); //SE INTRODUCEN LOS VALORES//
+        }
+    }
+   //Matriz B 
+    printf("\nMatriz 2\n");
+    printf("Indique el numero de filas:");scanf("%d",&filas); //SE INDICAN LAS PROPIEDADES DE LA SEGUNDA MATRIZ//
+    printf("Indique el numero de columnas:");scanf("%d",&columnas);
+
+    for(i=0; i < filas; i ++){
+        for(j=0;j < columnas; j ++){
+            printf("Indique los valores de su matriz [%d][%d]:",i + 1 ,j+ 1);scanf("%d",&MatrizB[i][j]); //SE INTRODUCEN LOS VALORES//
+        }
+    }
+
+    //Producto de matrices
+    for ( i=0; i < filas; i ++){
+        for(j=0; j< columnas;j++){
+            int suma=0;
+            for (k=0;k < columnas; k ++){
+                suma += MatrizA[i][k] * MatrizB[k][j];
+                
+            }
+            MatrizC[i][j]= suma;
+            printf("\t%d",MatrizC[i][j]);
+            
+        }
+        printf("\n"); //SE IMPRIME EL RESULTADO//
+    }
+}
+//Programa para sumar dos matrices//
+#define F 10
+#define C 10
+
+      
+void suma_matrices(){
+    printf("Programa para calcular la suma de dos matrices\n\n");
+
+    int matriz_A[F][C] , matriz_B[F][C], matriz_C[F][C],n_filas, n_columnas,filas,columnas;
+    
+    printf("Matriz 1\n \n");
+
+    printf("Indique el número de filas:");scanf("%d",&n_filas); //SE INTRODUCEN LAS PROPIEDADES DE LA PRIMERA MATRIZ//
+    printf("Indique el número de columnas:");scanf("%d",&n_columnas);
+
+    //Matriz a
+    
+    for (filas=0;filas < n_filas; filas ++){
+
+        for(columnas=0;columnas < n_columnas;columnas ++){
+            printf("Indique el elemento: [%d][%d]:",filas  + 1 ,columnas + 1);scanf("%d",&matriz_A[filas][columnas]); //SE INTRODUCEN LOS VALORES//
+        }
+    }
+
+
+    //Matriz B
+    printf("\n");
+    printf("Matriz 2\n");
+    
+    printf("Indique el número de filas:");scanf("%d",&n_filas); //SE INTRODUCEN LAS PROPIEDADES DE LA SEGUNDA MATRIZ//
+    printf("Indique el número de columnas:");scanf("%d",&n_columnas);
+    printf("\n");
+
+    for(filas=0;filas < n_filas; filas ++){
+        for (columnas=0;columnas < n_columnas;columnas++){
+            printf("Indique el elemento:[%d][%d]:",filas  + 1 ,columnas + 1);scanf("%d",&matriz_B[filas][columnas]); //SE INTRODUCEN LOS VALORES//
+        }
+    }
+
+          
+    //Suma de matrices
+    for(filas=0;filas < n_filas; filas ++){
+        for (columnas=0; columnas < n_columnas;columnas++){
+            
+            matriz_C [filas][columnas]= matriz_A[filas][columnas] + matriz_B[filas][columnas];
+    
+        }
+    }
+    
+    printf("\n");
+    //Impresión de la matriz
+    for (filas=0; filas < n_filas;filas ++){
+        
+        for(columnas=0;columnas < n_columnas;columnas ++){
+            printf("\t%d",matriz_C[filas][columnas]);
+        }
+        printf("\n");    //SE IMPRIME EL RESULTADO//
+    }
+    
+}
+/*
+La suma de cada cateto al cuadrado es igual a la hipotenusa al cuadrado
+Triángulo rectángulo: un ángulo de 90° y todos los lados diferentes
+Calcula la hipotenusa dek triángulo
+Se tiene que utilizar el parámetro lm para que funcione: gcc triangulo.c -lm -o triangulo
+*/
+void hipotenusa(){
+
+
+    float co, ca, h;
+    
+	printf("Indique el valor del cateto opuesto:");
+	scanf("%f",&co);
+    printf("Indique el valor del cateto adyacente:"); //SE INTRODUCEN LOS VALORES DE LOS CATETOS DEL TRIÁNGULO// 
+	scanf("%f",&ca);   
+    h=sqrt(co*co + ca*ca);
+    printf("La hipotenusa mide: %f",h); //SE IMPRIME EL VALOR DE LA HIPOTENUSA DEL TRIÁNGULO//
+
+
+}
+
+
+void area(){
+	
+	float base,alt;
+	float a;
+	printf("Escribe la base:");
+	scanf("%f",&base);
+	printf("Escribe la altura:"); //SE INTRODUCEN LOS VALORES DEL TRIÁNGULO//
+	scanf("%f",&alt);
+	a=base*alt/2;
+	printf("El area del triangulo es: %f",a); //SE IMPRIME EL VALOR DEL ÁREA DEL TRIÁNGULO//
+	
+	
+}
+
+
+void angulo(){
+	
+	
+	float a1,a2,a3;
+	printf("Escribe el valor de los 2 angulos:"); //SE INTRODUCEN LOS VALORES DE LOS ÁNGULOS DEL TRIÁNGULO//
+	scanf("%f %f",&a1,&a2);
+	a3=180 -(a1+a2);
+	printf("El tercer angulo mide : %f",a3); //SE IMPRIME EL VALOR DEL TERCER ÁNGULO DEL TRIÁNGULO//
+	
+}
+
+int main(){
+	
+	
+	char opc;
+	printf("Eliga la opcion que desee: a)Hipotenusa de un triangulo rectangulo ,  b) area de un triangulo   c)valor de un angulo ");
+	scanf("%c",&opc); //SE LEE LA OPCIÓN SLECCIONADA//
+	
+	
+	
+	switch(opc){ //SE APLICA EL CASO CORRESPONDIENTE A LA OPCIÓN SELECCIONADA//
+		
+		
+		case 'a':
+		hipotenusa();
+		break;
+		
+		
+		case 'b':
+		area();
+		break;
+		
+		
+		
+		case 'c':
+		angulo();
+		break;
+	  	
+		
+		
+	}
+	
+	
+	return 0;
+	
+
+}
 //Programa para calcular el factorial de un número//
 void factorial(){
 
@@ -207,13 +394,13 @@ switch (opción)
     case 5:
     printf("\n Iniciar programa matrices");
     scanf(%d", &n);
-    int matrices;
+    int suma_matrices;
     break;
 
     case 6:
     printf("\n Iniciar programa matrices 2");
     scanf(%d", &n);
-    int matrices 2;
+    int multiplicacion_matrices;
     break;
 
     case 7:
