@@ -279,7 +279,7 @@ void factorial(){
     
 }
 //Programa para calcular el salario neto mensual//
-void sueldo_neto(){
+void salario_neto(){
 	float bono,iva_a,iva_r,salario_bruto,salario_neto;
 	 
 	printf("Introduzca el salario bruto:");scanf("%f",&salario_bruto); //SE INTRODUCE EL SALARIO BRUTO//
@@ -305,11 +305,8 @@ void sueldo_neto(){
 		printf("Fin del programa");
 	}
 }
+
 //Programa para realizar conversiones de temperatura//
-
-#include<stdio.h>
-
-
 int opc, opc_c;
 float temperatura,resultado;
 
@@ -419,22 +416,22 @@ int main() {
     int n, eleccion;
  do
  {
-    printf("\n 1.triángulo");
-    printf("\n 2.cuadrado");
-    printf("\n 3.factorial");
-    printf("\n 4.salario");
-    printf("\n 5.matrices");
-    printf("\n 6.matrices2");
-    printf("\n 7.matrices3");
-    printf("\n 8.conversiones");
+    printf("\n 1.Triángulo");
+    printf("\n 2.Cuadrado");
+    printf("\n 3.Factorial");
+    printf("\n 4.Salario");
+    printf("\n 5.Suma de matrices");
+    printf("\n 6.Multiplicación de matrices");
+    printf("\n 7.Matriz transpuesta");
+    printf("\n 8.Conversiones de temperatura");
     printf("\n 9.Salir");
 //Se filtra la opción que va a elegir el usuario//
 do
 {
-    printf("\n Introduzca una opción (1-8):");
+    printf("\n Introduzca una opción (1-9):");
     scanf("%d", &eleccion);
 }
-while ( eleccion <1 || >8);
+while ( eleccion <1 || >9);
 //Se limitan las opciones que pueden ser válidas//
 switch (eleccion)
 {
@@ -459,7 +456,7 @@ switch (eleccion)
     case 4:
     printf("\n Iniciar programa salario");
     scanf("%d", &n);
-    int sueldo_neto;
+    int salario_neto;
     break;
 
     case 5:
@@ -476,7 +473,7 @@ switch (eleccion)
     case 7:
     printf("\n Iniciar programa matrices 3");
     scanf("%d", & n);
-    int matrices 3;
+    int matriz_transpuesta;
     break;
     
     case 8:
@@ -485,7 +482,8 @@ switch (eleccion)
     int conversiones;
     break;
 
-}while (opcion! =9);
+}while (eleccion! =9);
 return 0;
 
+}
 }
