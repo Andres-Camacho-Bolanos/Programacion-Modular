@@ -8,6 +8,7 @@ Se tiene que utilizar el parámetro lm para que funcione: gcc triangulo.c -lm -o
 #include<stdio.h>
 #include<math.h>
 
+void triangulo(){
 void hipotenusa(){
 
 
@@ -49,14 +50,9 @@ void angulo(){
 	printf("El tercer angulo mide : %f",a3); //SE IMPRIME EL VALOR DEL TERCER ÁNGULO DEL TRIÁNGULO//
 	
 }
-
-int main(){
-	
-	
 	char opc;
 	printf("Eliga la opcion que desee: a)Hipotenusa de un triangulo rectangulo ,  b) area de un triangulo   c)valor de un angulo ");
 	scanf("%c",&opc); //SE LEE LA OPCIÓN SLECCIONADA//
-	
 	
 	
 	switch(opc){ //SE APLICA EL CASO CORRESPONDIENTE A LA OPCIÓN SELECCIONADA//
@@ -80,9 +76,9 @@ int main(){
 		
 		
 	}
-	
-	
-	return 0;
-	
-
+} 
+int main() {
+    triangulo();
+    return 0;
 }
+	
