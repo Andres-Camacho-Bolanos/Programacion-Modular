@@ -1,12 +1,9 @@
-//Programa para sumar dos matrices//
-
-#include<stdio.h>
-#include <stdlib.h>
-
+#include <stdio.h>
+#include <math.h>
 #define F 10
 #define C 10
+//Programa para sumar dos matrices//
 
-      
 void suma_matrices(){
     printf("Programa para calcular la suma de dos matrices\n\n");
 
@@ -52,7 +49,7 @@ void suma_matrices(){
     }
     
     printf("\n");
-    //Impresión de la matriz
+    //Se imprime la matriz
     for (filas=0; filas < n_filas;filas ++){
         
         for(columnas=0;columnas < n_columnas;columnas ++){
@@ -62,9 +59,7 @@ void suma_matrices(){
     }
     
 }
-
-
 int main(){
-
-    suma_matrices();
+      suma_matrices();
+      return 0;
 }
