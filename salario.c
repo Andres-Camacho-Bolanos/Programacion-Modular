@@ -1,8 +1,7 @@
+#include <stdio.h>
+#include <math.h>
 //Programa para calcular el salario neto mensual//
-
-#include<stdio.h>
-
-void sueldo_neto(){
+void salario_neto(){
 	float bono,iva_a,iva_r,salario_bruto,salario_neto;
 	 
 	printf("Introduzca el salario bruto:");scanf("%f",&salario_bruto); //SE INTRODUCE EL SALARIO BRUTO//
@@ -27,5 +26,8 @@ void sueldo_neto(){
     else {
 		printf("Fin del programa");
 	}
+}
+int main(){
+	salario_neto();
 	return 0;
 }
