@@ -1,14 +1,12 @@
+#include <stdio.h>
+#include <math.h>
 /*
 La suma de cada cateto al cuadrado es igual a la hipotenusa al cuadrado
 Triángulo rectángulo: un ángulo de 90° y todos los lados diferentes
 Calcula la hipotenusa dek triángulo
-Se tiene que utilizar el parámetro lm para que funcione: gcc triangulo.c -lm -o triangulo
+Se tiene que utilizar el parámetro lm para que funcione: gcc triangulo.c -lm -o triangulo en linux
 */
 
-#include<stdio.h>
-#include<math.h>
-
-void triangulo(){
 void hipotenusa(){
 
 
@@ -50,35 +48,7 @@ void angulo(){
 	printf("El tercer angulo mide : %f",a3); //SE IMPRIME EL VALOR DEL TERCER ÁNGULO DEL TRIÁNGULO//
 	
 }
-	char opc;
-	printf("Eliga la opcion que desee: a)Hipotenusa de un triangulo rectangulo ,  b) area de un triangulo   c)valor de un angulo ");
-	scanf("%c",&opc); //SE LEE LA OPCIÓN SLECCIONADA//
-	
-	
-	switch(opc){ //SE APLICA EL CASO CORRESPONDIENTE A LA OPCIÓN SELECCIONADA//
-		
-		
-		case 'a':
-		hipotenusa();
-		break;
-		
-		
-		case 'b':
-		area();
-		break;
-		
-		
-		
-		case 'c':
-		angulo();
-		break;
-	  	
-		
-		
-	}
-} 
-int main() {
-    triangulo();
-    return 0;
+int main(){
+	triangulo();
+	return 0;
 }
-	
