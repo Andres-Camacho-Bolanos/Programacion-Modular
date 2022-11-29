@@ -1,8 +1,8 @@
-//Programa para multiplicar matrices de 2x2//
-
 #include <stdio.h>
+#include <math.h>
 #define F 2
 #define C 2
+//Programa para multiplicar matrices de 2x2//
 
 void multiplicacion_matrices(){
      
@@ -43,10 +43,7 @@ printf("Matriz 1\n");
         printf("\n"); //SE IMPRIME EL RESULTADO//
     }
 }
-   
-
-
 int main(){
-
-    multiplicacion_matrices();
+     multiplicacion_matrices();
+     return 0;
 }
