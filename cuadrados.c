@@ -1,14 +1,13 @@
+#include <stdio.h>
+#include <math.h>
+//
 /* 
 Realiza un programa que calcule el area de la figura seleccionada:
 Cuadrado
 Trapecio
 Rectángulo
 */
-#include<stdio.h>
-#include<math.h>
-
-
-int main(){
+void cuadrados(){
 
     int opcion;
     
@@ -50,8 +49,8 @@ int main(){
                 printf("No ha seleccionado una opción valida"); //SE IMPRIME UN MENSAJE PREDETERMINADO EN CASO DE NO SELECCIONAR UNA OPCIÓN VÁLIDA//
         }
 
-
-
-
-    return 0;
+}
+int main(){
+	cuadrados();
+	return 0;
 }
