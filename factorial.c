@@ -1,7 +1,6 @@
+#include <stdio.h>
+#include <math.h>
 //Programa para calcular el factorial de un número//
-#include<stdio.h>
-
-
 void factorial(){
 
     int entero,facto=1,i;
@@ -17,11 +16,8 @@ void factorial(){
     
     
     
-}    
-        
-        
+}
 int main(){
-    
     factorial();
     return 0;
 }
