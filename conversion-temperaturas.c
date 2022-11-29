@@ -1,12 +1,10 @@
+#include <stdio.h>
+#include <math.h>
 //Programa para realizar conversiones de temperatura//
-
-#include<stdio.h>
-
-
 int opc, opc_c;
 float temperatura,resultado;
 
-
+void temperaturas(){
 void fahrenheit(){
     
     printf("Indique el valor de la temperatura:");scanf("%f",&temperatura); //SE LEE EL VALOR DE LA TEMPERATURA//
@@ -80,9 +78,6 @@ void kelvin(){
     }
 }
 
-
-int main(){
-
     printf("Indique la unidad del valor de la temperatura (seleccionar el número de la opción que corresponda):"); //SE LEE EL VALOR DE LA TEMPERATURA//
     printf("\n");
     printf("\n1.°F\n2.°C\n3. K\n:");scanf("%i",&opc);
@@ -107,6 +102,9 @@ int main(){
     
         default:
             printf("Por favor, seleccione una opción valida"); //SE IMPRIME UN MENSAJE PREDETERMINADO EN CASO DE NO SELECCIONAR UNA OPCIÓN VÁLIDA//
-    }    
+}
+}
+int main(){
+    temperaturas();
     return 0;
 }
