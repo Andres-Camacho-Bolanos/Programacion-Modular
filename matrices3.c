@@ -1,36 +1,38 @@
-//Programa para obtener la matriz transpuesta a partir de la original//
-
-#include<stdio.h>
-#define MAX 3
-int main(int argc, char** args)
-{
-int matriz[MAX][MAX], columna, renglon, i=0, j=0;
-printf("Introduce el número de columnas ");
-scanf("%d", &columna);
-printf("Introduce el número de renglones ");
-scanf("%d", &renglon);
-for(i = 0;i < renglon;i++)/*SE LEEN LOS DATOS INTRODUCIDOS*/
-{
-for(j = 0;j < columna;j++){
-printf("Introduce los valores de la matriz [%d][%d]==>\t", i+1, j+1);
-scanf("%d", &matriz[i][j]);
+#include <stdio.h>
+#include <math.h>
+#define F 3
+#define C 3
+//Programa para generar una matriz transpuesta a partir de una original//
+void matriz_transpuesta(){	
+	int m, n, c, d, original[3][3], trans[3][3];
+	
+	printf("Ingrese el número de filas y columnas, separados por un espacio: ");
+	scanf("%d%d",&m,&n);
+	printf("Ingrese los elementos de la matriz: \n"); //Se introducen las propiedades de la matriz//
+	
+	for(c=0;c<m;c++){
+		for(d=0;d<n;d++){
+			scanf("%d",&original[c][d]);
+		}
+	}
+	
+	for(c=0;c<m;c++){
+		for(d=0;d<n;d++){
+			trans[d][c] = original[c][d]; //Se hace la transformación//
+		}
+	}
+	
+	printf("La matriz transpuesta es: \n");
+	
+	for(c=0;c<n;c++){
+		for(d=0;d<m;d++){
+			printf("%d\t",trans[c][d]);
+		}  
+		printf("\n"); //Se imprimen resultados//
+	}
+	
 }
-}
-printf("\n\n\t\tMatriz original");/* SE IMPRIME LA MATRIZ ORIGINAL*/
-printf("\n\n");
-for(i = 0;i < renglon;i++){
-printf("\n\t\t");
-for(j = 0;j < columna;j++){
-printf(" %6d ", matriz[i][j]);
-}
-}
-printf("\n\n\t\tMatriz transpuesta");/* SE IMPRIME LA MATRIZ TRANSPUESTA*/
-printf("\n\n");
-for(i = 0;i < columna;i++){
-printf("\n\t\t");
-for(j = 0;j < renglon;j++){
-printf(" %6d ", matriz[j][i]);
-}
-}
-printf("\n\n\n");
+int main(){
+  matriz_transpuesta();
+  return 0;
 }
